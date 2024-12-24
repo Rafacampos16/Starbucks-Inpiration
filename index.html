@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starbucks Inspired</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="icon" href="img/LogoIcon.jpg" type="image/x-icon">
+
+
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-top">
+      <img src="img/logo.png" alt="Starbucks Logo" class="logo">
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <ul class="nav-links">
+        <li class="menu-always"><a href="#menu">MENU</a></li>
+        <li class="menu-always"><a href="#recompensas" class="active">REWARDS</a></li>
+        <li class="menu-always"><a href="#cartoes">GIFT CARDS</a></li>
+        <li class="menu-mobile-only"><a href="#localizar">Encontre uma loja</a></li>
+        <li class="menu-mobile-only"><a href="#entrar">Entrar</a></li>
+        <li class="menu-mobile-only"><a href="#inscreva-se">Cadastre-se</a></li>
+      </ul>
+      
+      
+      <div class="nav-right">
+        <a href="#localizar" class="find-store"><i class="fas fa-map-marker-alt"></i>Encontre uma loja</a>
+        <a href="#entrar" class="btn-outline">Entrar</a>
+        <a href="#inscreva-se" class="btn-fill">Cadastre-se</a>
+      </div>
+      
+    </div>
+    <div class="navbar-bottom">
+      <p>STARBUCKS® REWARDS</p>
+    </div>
+    
+  </nav>
+
+  
+
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <h1>CAFÉ GRÁTIS <br> ESTÁ A UM TOQUE</h1>
+      <p>Inscreva-se agora para começar a ganhar recompensas.</p>
+      <a href="#inscreva-se" class="btn-fill">Inscreva-se agora</a>
+      <p class="small-text">
+        Ou <a href="#app" class="link">inscreva-se pelo aplicativo</a> para a melhor experiência.
+      </p>
+    </div>
+  </header>
+  
+  <!--RESGATE DE ESTRELAS TUTORIAL-->
+
+  <section id="recompensas" class="rewards-section">
+    <h2>Começar é fácil</h2>
+    <p>Ganhe estrelas e receba recompensas em poucos passos.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="circle">1</div>
+        <h3>Crie uma conta</h3>
+        <p>Para começar, <a href="#inscreva-se">cadastre-se agora</a>. Você também pode <a href="#app">se inscrever pelo aplicativo</a> para acessar todos os benefícios do Starbucks® Rewards.</p>
+      </div>
+      <div class="step">
+        <div class="circle">2</div>
+        <h3>Pague como preferir</h3>
+        <p>Use dinheiro, cartão de crédito/débito ou pague diretamente pelo aplicativo. Você acumula estrelas de qualquer forma. <a href="#como-funciona">Saiba mais</a>.</p>
+      </div>
+      <div class="step">
+        <div class="circle">3</div>
+        <h3>Ganhe recompensas</h3>
+        <p>Ao acumular estrelas, você pode trocá-las por recompensas, como bebidas grátis, comida e muito mais. Comece a resgatar com apenas 25 estrelas!</p>
+      </div>
+    </div>
+  </section>
+
+  <!--CARROSEL DE RESGATE-->
+  <section class="rewards-carousel">
+    <div class="rewards-header">
+      <h2>Obtenha seus favoritos de graça</h2>
+      <div class="rewards-options">
+        <button class="reward-btn active" data-stars="25">
+          <img src="img/estrela.png" alt="Estrela" class="star-icon"> 25
+        </button>
+        <button class="reward-btn" data-stars="100">
+          <img src="img/estrela.png" alt="Estrela" class="star-icon"> 100
+        </button>
+        <button class="reward-btn" data-stars="200">
+          <img src="img/estrela.png" alt="Estrela" class="star-icon"> 200
+        </button>
+        <button class="reward-btn" data-stars="300">
+          <img src="img/estrela.png" alt="Estrela" class="star-icon"> 300
+        </button>
+        <button class="reward-btn" data-stars="400">
+          <img src="img/estrela.png" alt="Estrela" class="star-icon"> 400
+        </button>
+      </div>
+    </div>
+    <div class="rewards-content">
+      <div class="reward-image">
+        <img id="reward-image" src="img/rec1.png" alt="Imagem da recompensa" />
+      </div>
+      <div class="reward-description">
+        <h3>Customize sua bebida</h3>
+        <p>
+          Faça sua bebida do jeito certo com um toque extra de espresso ou um toque do seu xarope favorito.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!--Extras-->
+  <section class="endless-extras">
+    <h2>Extras infinitos</h2>
+    <p>Aderir ao Starbucks® Rewards significa ter acesso a benefícios como pedidos</p>
+    <p>rápidos e fáceis, recompensas saborosas e, sim, café grátis.</p>
+    <div class="extras-container">
+      <div class="extra-item">
+        <img src="img/ext1.jpg" alt="Grátis e brindes">
+        <h3>Brindes Divertidos</h3>
+        <p>Você não só pode ganhar café grátis, mas também esperar um presente de aniversário, além de recargas de café e chá.</p>
+        <a class="learn-more-btn" data-id="1">Saiba mais</a>
+      </div>
+      <div class="extra-item">
+        <img src="img/ext2.jpg" alt="Pedir com antecedência">
+        <h3>Peça com Antecedência</h3>
+        <p>Domine a arte de fazer pedidos antecipadamente com favoritos e métodos de pagamento salvos.</p>
+        <a class="learn-more-btn" data-id="2">Saiba mais</a>
+      </div>
+      <div class="extra-item">
+        <img src="img/ext3.jpg" alt="Ganhe mais rápido">
+        <h3>Ganhe mais rápido</h3>
+        <p>Ganhe estrelas ainda mais rápido com desafios Bonus Star, Double Star Days e jogos emocionantes.</p>
+        <a class="learn-more-btn" data-id="3">Saiba mais</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Modal com carrosséis -->
+  <div id="modal" class="hidden">
+    <div class="modal-content">
+      <button class="close-modal">&times;</button>
+  
+      <!-- Carrossel 1 -->
+      <div class="carousel" id="carousel1">
+        <div class="carousel-item" data-id="1">
+          <img src="img/I1C1.jpg" alt="Primeiro Item">
+          <h3>Alimentos, bebidas e muito mais grátis</h3>
+          <p>Troque suas estrelas por favoritos, como uma bebida gelada artesanal, uma caixa de proteínas ou até mesmo um copo de café.</p>
+        </div>
+        <div class="carousel-item hidden" data-id="2">
+          <img src="img/I2C1.jpg" alt="Segundo Item">
+          <h3>Presente de aniversário de cortesia</h3>
+          <p>Todos os anos, no seu aniversário, ganhe uma bebida ou comida grátis de sua escolha.</p>
+        </div>
+        <div class="carousel-item hidden" data-id="3">
+          <img src="img/I3C1.jpg" alt="Terceiro Item">
+          <h3>Café e chá preparados são reabastecidos por nossa conta</h3>
+          <p>Teremos prazer em reabastecer sua xícara quente enquanto você estiver na loja.</p>
+          <button class="close-modal ok-btn">Ok</button>
+        </div>
+        <div class="carousel-controls">
+          <button class="prev-btn">
+            <i class="fa-solid fa-chevron-left" style="color: #333333;"></i>
+          </button>
+          <div class="indicator-container"></div> <!-- Indicadores aqui -->
+          <button class="next-btn">
+            <i class="fa-solid fa-chevron-right" style="color: #333333;"></i>
+          </button>
+        </div>
+      </div>
+  
+     
+      <!-- Carrossel 2 -->
+      <div class="carousel" id="carousel2" style="display: none;">
+        <div class="carousel-item" data-id="1">
+          <img src="img/I1C2.jpg" alt="Primeiro Item">
+          <h3>Toque, vá.</h3>
+          <p>Selecione os itens do menu no aplicativo junto com a localização da sua loja. Em seguida, diga ao barista seu nome quando passar pela área de coleta para pegar seu pedido.</p>
+        </div>
+        <div class="carousel-item hidden" data-id="2">
+          <img src="img/I2C2.jpg" alt="Segundo Item">
+          <h3>Só para você</h3>
+          <p>
+            Nosso aplicativo permite que você personalize seu pedido e acompanhe o tempo estimado de coleta. Certifique-se de salvar seus favoritos para que estejam todos prontos para seu próximo pedido.</p>
+        </div>
+        <div class="carousel-controls">
+          <button class="prev-btn">
+            <i class="fa-solid fa-chevron-left" style="color: #333333;"></i>
+          </button>
+          <div class="indicator-container"></div> <!-- Indicadores aqui -->
+          <button class="next-btn">
+            <i class="fa-solid fa-chevron-right" style="color: #333333;"></i>
+          </button>
+        </div>
+      </div>
+  
+      <!-- Carrossel 3 -->
+      <div class="carousel" id="carousel3" style="display: none;">
+        <div class="carousel-item" data-id="1">
+          <img src="img/I1C3.jpg" alt="Primeiro Item">
+          <h3>Desafios bônus de estrelas</h3>
+          <p>Acumule estrelas com oportunidades regulares de ser recompensado por aquilo que você ama.</p>
+        </div>
+        <div class="carousel-item hidden" data-id="2">
+          <img src="img/I2C3.jpg" alt="Segundo Item">
+          <h3>Dias de estrela dupla</h3>
+          <p>Fique atento aos dias especiais em que você ganhará o dobro de estrelas em quase tudo.</p>
+        </div>
+        <div class="carousel-item hidden" data-id="3">
+          <img src="img/I3C3.jpg" alt="Terceiro Item">
+          <h3>Jogos exclusivos para membros</h3>
+          <p>Jogue para ter a chance de ganhar prêmios exclusivos, comidas e bebidas grátis e muito mais.</p>
+          <button class="close-modal ok-btn">Ok</button>
+        </div>
+        <div class="carousel-controls">
+          <button class="prev-btn">
+            <i class="fa-solid fa-chevron-left" style="color: #333333;"></i>
+          </button>
+          <div class="indicator-container"></div> <!-- Indicadores aqui -->
+          <button class="next-btn">
+            <i class="fa-solid fa-chevron-right" style="color: #333333;"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+    </section>
+  <!--PAGAMENTO-->
+  <section class="rewards-section2">
+    <h2>Dinheiro ou cartão, você ganha estrelas</h2>
+    <p>Não importa como você paga, você pode ganhar estrelas com seu café da manhã. Essas estrelas somam</p>
+    <p>(realmente delicioso) Recompensas.</p>
+    
+    <div class="reward-option">
+      <div class="reward-option-item">
+        <h3>1★ por dólar</h3>
+        <p style="margin-left: 20px;">Pague conforme usar</p>
+        <div class="reward-option-row">
+          <div class="reward-option-content">
+            <div class="reward-option-icon">
+              <img src="img/Pag1.png" alt="Scan and pay icon">
+            </div>
+            <div class="reward-option-text">
+              <h4>Digitalize e pague separadamente</h4>
+              <p>Use dinheiro ou cartão de crédito/débito na caixa registradora.</p>
+            </div>
+          </div>
+          <div class="reward-option-content">
+            <div class="reward-option-icon">
+              <img src="img/pag2.png" alt="Save payment icon">
+            </div>
+            <div class="reward-option-text">
+              <h4>Salve o pagamento no aplicativo</h4>
+              <p>Finalize a compra mais rapidamente salvando um cartão de crédito/débito ou PayPal em sua conta.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <hr>
+      
+      <div class="reward-option-item">
+        <h3>2★ por dólar</h3>
+        <p style="margin-left: 20px;">Adicione fundos no aplicativo</p>
+        <div class="reward-option-row">
+          <div class="reward-option-content">
+            <div class="reward-option-icon">
+              <img src="img/pag3.png" alt="Preload icon">
+            </div>
+            <div class="reward-option-text">
+              <h4>Pré-carregar</h4>
+              <p>Para economizar tempo e ganhar estrelas duas vezes mais rápido, adicione dinheiro ao seu cartão Starbucks digital.</p>
+            </div>
+          </div>
+          <div class="reward-option-content">
+            <div class="reward-option-icon">
+              <img src="img/pag4.png" alt="Register gift card icon">
+            </div>
+            <div class="reward-option-text">
+              <h4>Registre seu vale-presente</h4>
+              <p>Em seguida, use-o para pagar pelo aplicativo. Consolide saldos de vários cartões em um só lugar.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- Recarregar -->
+  <div id="loader">
+    <div class="coffee-cup">
+      <i class="fa-solid fa-mug-saucer" style="color: #2a2623;"></i>
+      <div class="steam"></div>
+      <div class="steam steam-2"></div>
+    </div>
+  </div>
+
+  <!--Dúvidas-->
+  <section class="questions-section">
+    <h2>Perguntas?</h2>
+    <p>
+        Queremos ajudar da melhor forma possível. Você pode perguntar ao seu barista a qualquer momento 
+        ou consultar os termos mais comuns respondidos 
+        <a target="_blank">bem aqui</a>.
+    </p>
+</section>
+
+
+  <!--FOOTER-->
+  <footer>
+    <div class="footer-container">
+      <div class="social-icons">
+        <a href="https://open.spotify.com/user/starbucks" target="_blank"><i class="fab fa-spotify"></i></a>
+        <a href="https://www.facebook.com/Starbucks/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://br.pinterest.com/starbucks/" target="_blank"><i class="fab fa-pinterest"></i></a>
+        <a href="https://www.instagram.com/starbucks" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/starbucks" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://x.com/starbucks/" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      </div>
+      <div class="footer-text">
+        ©RafaCampos
+      </div>
+    </div>
+  </footer>
+  
+
+
+  <script src="script.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,1197 @@
+/* Paleta de Cores */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Parkinsans:wght@300..800&display=swap');
+:root {
+    --verde-escuro: #1e3932;
+    --verde: #008248;
+    --verde-claro: #d4e9e2;
+    --off-white: #f1f8f6;
+    --bege: #f3f1e7;
+    --preto: #000000;
+    --cinza-claro: #e0e0e0;
+  }
+  
+  /* Reset e Estilo Básico */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--off-white);
+    overflow-x: hidden; /* Evita barras de rolagem horizontais caso algo ultrapasse a largura da tela */
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .navbar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+    background-color:#ffffff;
+    border-bottom: 1px solid var(--cinza-claro);
+  }
+  
+  .logo {
+    height: 50px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin-left: -24rem; /* Aproximar da logo */
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 650;
+    font-style: normal;
+    color: #212121;
+    position: relative;
+  }
+  
+  .nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -43px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 10px;
+    background-color: #00754a;
+  }
+
+  .nav-links a:hover{
+    color: var(--verde);
+  }
+  
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .find-store {
+    color: var(--preto);
+    text-decoration: none;
+    font-size: 1.0rem;
+    font-weight: 500;
+    font-family: "Parkinsans", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 40px;
+  }
+  
+  .find-store:hover{
+    color: var(--verde);
+  }
+  .nav-right .btn-outline,
+  .nav-right  .btn-fill {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    text-decoration: none;
+  }
+
+
+
+  .btn-outline {
+    color: var(--preto);
+    background-color: #ffffff;
+    border: 1px solid var(--preto);
+    font-weight: 500;
+    font-family: "Parkinsans", sans-serif;
+  }
+  
+  .btn-outline:hover {
+    background-color: var(--cinza-claro);
+  }
+  
+  .btn-fill {
+    color: var(--off-white);
+    background-color: var(--preto);
+    border: none;
+    font-weight: 500;
+    font-family: "Parkinsans", sans-serif;
+  }
+  
+  .btn-fill:hover {
+    background-color: #3b3939c2;
+    color: #ffffff;
+  }
+  
+  .navbar-bottom {
+    background-color: var(--verde-escuro);
+    color: var(--off-white);
+    text-align: left; /* Alinhamento ajustado */
+    padding: 0.9rem 8rem;
+    font-weight: 800;
+    font-family: "Parkinsans", sans-serif;
+    font-size: 1rem;
+    position: relative;
+    transition: all 0.3s ease; /* Animação suave ao se fixar */
+  }
+  
+  .navbar-bottom.fixed {
+    position: fixed; /* Torna fixa */
+    top: 0; /* Alinha ao topo */
+    left: 0;
+    width: 100%; /* Garante que ocupe toda a largura */
+    z-index: 1000; /* Fica acima de outros elementos */
+  }
+/* Header */
+.header {
+  position: relative;
+  background-color: #d4e9e2; /* Cor de fundo caso a imagem não carregue */
+  background-image: url('img/star.png'); /* Substitua pelo caminho correto da imagem */
+  background-size: 140%; /* Amplia a imagem para ocupar mais espaço */
+  background-position: 50% center; /* Move a imagem mais para a direita */
+  background-repeat: no-repeat;
+  padding: 6rem 8rem;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.header-content {
+  max-width: 50%;
+  z-index: 2; /* Garante que o texto fique acima da imagem */
+  color: var(--preto);
+}
+
+.header-content h1 {
+  font-family: "Parkinsans", sans-serif;
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.header-content p {
+  font-family: "Parkinsans", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.header-content a.btn-fill {
+  display: inline-block; /* Garante que o botão tenha comportamento de bloco */
+  margin: 0.1rem 0; /* Adiciona espaçamento acima e abaixo do botão */
+  padding: 0.6rem 1.5rem;
+  background-color: var(--verde);
+  color: var(--off-white);
+  border-radius: 20px;
+  font-weight: 600;
+  font-family: "Parkinsans", sans-serif;
+  text-decoration: none;
+}
+
+.header-content a.btn-fill:hover {
+  background-color: #00754a;
+  color: var(--off-white);
+}
+
+.header-content .small-text {
+  font-size: 0.9rem;
+  margin-top: 1rem; /* Adiciona espaço entre o botão e o texto pequeno */
+}
+
+.header-content .small-text a {
+  color: var(--verde);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.header-content .small-text a:hover {
+  text-decoration: underline;
+}
+
+
+/* Garantir responsividade */
+@media (max-width: 768px) {
+  .header {
+    padding: 2rem;
+    background-position: center;
+  }
+
+  .header-content {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+/*RESGATE DE ESTRELAS TUTORIAL*/
+
+.rewards-section {
+  font-family: "Open Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  padding: 40px 20px;
+  background-color: #ffffff;
+  text-align: center;
+  color: #333333;
+  width: 100%;
+  margin-top: 90px;
+}
+
+.rewards-section h2 {
+  font-size: 2rem;
+  color:  #333333;
+  margin-bottom: 10px;
+}
+
+.rewards-section p {
+  font-size: 0.9rem;
+  margin-bottom: 60px;
+  color: #333333;
+  font-weight: 600;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: #008248;
+  color: #ffffff;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.step h3 {
+  font-size: 1.25rem;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 0.9rem;
+  color: #333333;
+  width: 350px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.step a {
+  color: #008248;
+  text-decoration: none;
+  font-weight: bold;
+  
+}
+
+.step a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .steps {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .step {
+    max-width: 300px;
+  }
+}
+
+/*CARROSEL DE RESGATE*/
+.rewards-carousel {
+  padding: 20px;
+  background-color: #f1f8f5;
+  text-align: center;
+}
+
+.rewards-header h2 {
+  font-size: 1.9rem;
+  color:  #333333;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.rewards-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+ }
+
+.reward-btn {
+  font-family: "Open Sans", serif;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #333333;
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+}
+
+.reward-btn img.star-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.reward-btn.active {
+  color: #008248;
+  font-weight: bold;
+}
+
+.reward-btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  width: 80px;
+  background-color: #008248;
+}
+
+.rewards-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: #d8ece4;
+  padding: 20px;
+  border-radius: 8px;
+  width: 1000vw; /* Largura total da viewport */
+  margin: 0; /* Remove margens externas */
+  box-sizing: border-box;
+  position: relative; /* Respeita o fluxo do documento */
+  left: 0; /* Garante alinhamento à esquerda */
+  transform: translateX(-45%); /* Corrige deslocamentos */
+}
+
+
+.reward-image img {
+  width: 400px;
+  height: 250px;
+}
+
+.reward-description {
+  text-align: left;
+  max-width: 400px;
+}
+
+.reward-description h3 {
+  font-size: 1.5rem;
+  color: #333333;
+  font-family: "Open Sans", serif;
+  margin-bottom: 20px;
+}
+
+.reward-description p {
+  font-size: 0.9rem;
+  color: #333333;
+  width: 350px;
+  font-weight: 600;
+  line-height: 1.8;
+  font-family: "Open Sans", serif;
+}
+
+/*EXTRAS*/
+.endless-extras {
+  text-align: center;
+  padding: 2rem;
+  background-color: #ffffff;
+}
+
+.endless-extras h2 {
+  font-size: 1.9rem;
+  color:  #333333;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.endless-extras p {
+  font-size: 0.9rem;
+  color: #333333;
+  font-weight: 600;
+  line-height: 1.8;
+  font-family: "Open Sans", serif;
+}
+
+.extras-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.extra-item {
+  max-width: 350px;
+  text-align: center;
+  background-color: var(--background-light);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.extra-item img {
+  max-width: 115px;
+  margin-bottom: 1rem;
+}
+
+
+.extra-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color:  #333333;
+}
+
+.extra-item p {
+  font-size: 0.9rem;
+  color: #333333;
+  width: 350px;
+  font-weight: 600;
+  line-height: 1.8;
+  margin-bottom: 1rems;
+  font-family: "Open Sans", serif;
+}
+
+.extra-item .learn-more-btn {
+  font-size: 1rem;
+  color: var(--verde);
+  text-decoration: underline;
+  font-family: "Open Sans", serif;
+  font-weight: 600;
+}
+
+.extra-item .learn-more-btn:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+#modal.hidden {
+  display: none;
+}
+
+
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  min-height: 400px;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.carousel h3{
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color:  #333333;
+  font-family: "Open Sans", serif;
+  margin-bottom: 20px;
+}
+
+.carousel p{
+  font-size: 0.95rem;
+  color: #333333;
+  width: 350px;
+  font-weight: 600;
+  line-height: 1.8;
+  margin-bottom: 1rems;
+  font-family: "Open Sans", serif;
+}
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.prev-btn, .next-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.prev-btn{
+  margin-right: 20px;
+}
+
+.next-btn{
+  margin-left: 20px;
+}
+
+.indicator-container {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.indicator {
+  width: 13px;
+  height: 13px;
+  background-color: lightgray;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.indicator.active {
+  background-color: #00754a;
+}
+
+.ok-btn {
+  background: #ffffff;
+  color: #333333;
+  border: 1.5px solid var(--preto);
+  padding: 0px 15px;
+  cursor: pointer;
+  border-radius: 19px;
+  height: 40px;
+}
+
+.ok-btn:hover{
+  background-color: #a3a3a350;
+}
+
+
+/*PAGAMENTO*/
+.rewards-section2 {
+  text-align: center;
+  margin: 50px auto;
+  width: 100%;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  background-color: #f8f4ec;
+  margin-top: 40px;
+  font-family: "Open Sans", serif;
+}
+
+.rewards-section2 h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.rewards-section2 p {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  color: #333333;
+  font-family: "Open Sans", serif;
+  font-weight: 600;
+}
+
+.reward-option {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.reward-option-item {
+  text-align: left;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.reward-option-item h3 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  color: #333333;
+}
+
+.reward-option-item p {
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: #333333;
+  width: 350px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+/* Linha horizontal entre as opções */
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 30px 0;
+}
+
+/* Alinhamento horizontal para os itens */
+.reward-option-row {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  flex-wrap: wrap;
+}
+
+.reward-option-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 400px;
+}
+
+.reward-option-icon img {
+  width: 100px;
+  height: 140px;
+}
+
+.reward-option-text h4 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.reward-option-text p {
+  font-size: 1em;
+  color: #666;
+}
+
+/*REcarregar*/
+/* Loader */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-in-out;
+}
+
+body.loaded #loader {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Ícone do Café */
+.coffee-cup {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coffee-cup i {
+  font-size: 100px;
+  color: #312f26;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+
+/* Fumaça */
+.steam {
+  position: absolute;
+  top: -60px; /* Ajuste para posicionar acima do ícone */
+  width: 20px;
+  height: 60px;
+  background: rgba(80, 80, 80, 0.7); /* Fumaça mais escura */
+  border-radius: 50%;
+  animation: steam-rise 3s infinite ease-in-out;
+  opacity: 0;
+  z-index: -1; /* Coloca a fumaça atrás do ícone */
+}
+
+.steam-2 {
+  left: 30px;
+  animation-delay: 1s;
+}
+
+/* Animações */
+@keyframes steam-rise {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/*Questões*/
+.questions-section {
+  text-align: left;
+  margin: 20px auto;
+  padding: 20px;
+  color: #333333; /* Use a variável de cor principal do texto */
+  font-family: "Open Sans", serif;
+  margin-left: 190px;
+}
+
+.questions-section h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.questions-section p {
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: #333333;
+  width: 600px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.questions-section a {
+  color: var(--verde); /* Cor do link */
+  text-decoration: underline;
+}
+
+.questions-section a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/*FOOTER*/
+footer {
+  border-top: 1px solid #ccc;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+.footer-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--verde);
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #333;
+}
+
+/*RESPONSIVADE*/
+/* Adicionando estilos para responsividade */
+@media (max-width: 768px) {
+  /* Navbar ajustes */
+  .navbar-top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: fixed;
+    top: 0;
+    right: -100%; /* Fora da tela inicialmente */
+    background-color: var(--off-white);
+    width: 70%;
+    height: 100%;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 2rem 1rem;
+    z-index: 1000;
+    transition: right 0.3s ease; /* Animação suave */
+  }
+
+  .nav-links.active {
+    right: 0; /* Exibe a aba lateral */
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    position: relative;
+    z-index: 1001; /* Fica acima da aba */
+  }
+
+  .hamburger span {
+    display: block;
+    background-color: var(--preto);
+    height: 3px;
+    width: 100%;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+  .nav-right {
+    display: none; /* Oculta no mobile */
+  }
+
+  .navbar-bottom {
+    display: none; /* Move para o menu lateral no mobile */
+  }
+
+  /* Header ajustes */
+    /* Header ajustes */
+    .header {
+      padding: 2rem;
+      background-size: cover;
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end; /* Alinha a imagem à direita */
+    }
+  
+    .header img {
+      max-width: 50%; /* Reduz o tamanho da imagem no mobile */
+      height: auto;
+      object-fit: cover;
+    }
+  
+    .header-content {
+      position: absolute;
+      top: 10%; /* Posiciona o texto no topo da imagem */
+      right: 45%;
+      max-width: 50%;
+      text-align: left;
+      z-index: 10; /* Garante que o texto fique acima da imagem */
+    }
+  
+    .header-content h1 {
+      font-size: 1.8rem;
+    }
+  
+    .header-content p {
+      font-size: 0.9rem;
+    }
+  
+    .header-content a.btn-fill {
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+    }
+  
+    .header-content .small-text {
+      font-size: 0.8rem;
+    }
+    
+
+  /* Centralizando logo e botão do menu hambúrguer */
+  .navbar-top .logo {
+    margin-right: auto;
+  }
+}
+
+/* Adicionando funcionalidade de menu hambúrguer */
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100%;
+    background-color: var(--off-white);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 2rem 1rem;
+    z-index: 1000;
+    transition: right 0.3s ease;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li {
+    list-style: none;
+    margin-bottom: 1rem;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--preto);
+    font-weight: 500;
+  }
+
+  .nav-links a.active::after {
+    content: none; /* Remove a linha verde */
+  }
+
+  .navbar-bottom p {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+
+  .nav-links .navbar-bottom {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none; /* Oculta o botão no desktop */
+  }
+
+  .nav-links {
+    display: flex; /* Mostra os itens normalmente no desktop */
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .nav-links .nav-right {
+    display: none; /* Garante que itens do menu lateral não apareçam no desktop */
+  }
+}
+
+
+/* Para todos os dispositivos */
+.nav-links .menu-always {
+  display: flex; /* Sempre visível */
+}
+
+.nav-links .menu-mobile-only {
+  display: none; /* Esconde os itens móveis no desktop */
+}
+
+/* Apenas no mobile */
+@media (max-width: 768px) {
+  .nav-links .menu-mobile-only {
+    display: flex; /* Mostra os itens móveis no menu lateral */
+  }
+}
+
+/*CARROSSEL*/
+@media (max-width: 768px) {
+  .rewards-carousel {
+    padding: 10px;
+    width: 100%; /* Garante que a largura não ultrapasse o viewport */
+    overflow-x: hidden; /* Remove possíveis barras de rolagem horizontais */
+  }
+
+  .rewards-header h2 {
+    font-size: 1.5rem; /* Reduz o tamanho do título */
+    margin-bottom: 20px;
+  }
+
+  .rewards-options {
+    flex-wrap: wrap; /* Permite que os botões se ajustem à largura disponível */
+    justify-content: center; /* Centraliza os botões */
+    gap: 10px; /* Ajusta o espaçamento entre os botões */
+  }
+
+  .reward-btn {
+    font-size: 1rem; /* Reduz o tamanho do texto nos botões */
+    padding: 8px; /* Diminui o espaçamento interno dos botões */
+  }
+
+  .rewards-content {
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    align-items: center; /* Centraliza os elementos */
+    gap: 15px; /* Ajusta o espaçamento entre a imagem e o texto */
+    padding: 0 10px; /* Adiciona margem interna para evitar corte nas laterais */
+  }
+
+  .reward-image img {
+    width: 80%; /* Reduz o tamanho da imagem */
+    height: auto; /* Mantém a proporção */
+    max-width: 300px; /* Limita a largura máxima */
+  }
+
+  .reward-description {
+    text-align: center; /* Centraliza o texto */
+    max-width: 90%; /* Garante que o texto se ajuste à tela */
+  }
+
+  .reward-description h3 {
+    font-size: 1.2rem; /* Reduz o tamanho do subtítulo */
+  }
+
+  .reward-description p {
+    font-size: 0.9rem; /* Ajusta o tamanho do parágrafo */
+  }
+
+  @media (max-width: 768px) {
+    .reward-description h3, 
+    .rewards-content h3, 
+    .reward-option-item h3 {
+      display: none !important; /* Força o desaparecimento */
+    }
+  }
+  
+}
+  
+
+@media (max-width: 768px) {
+  /* Ajustes para .rewards-section2 */
+  .rewards-section2 {
+    padding: 20px;
+    text-align: center; /* Centraliza os textos no geral */
+  }
+
+  .reward-option-item {
+    text-align: left; /* Alinha os itens individuais à esquerda */
+    margin-bottom: 20px; /* Espaçamento entre os itens */
+  }
+
+  .reward-option-row {
+    display: flex;
+    flex-direction: column; /* Coloca os itens verticalmente */
+    align-items: center; /* Centraliza os itens */
+    gap: 15px; /* Ajusta o espaçamento entre itens */
+  }
+
+  .reward-option-content {
+    display: flex;
+    flex-direction: row; /* Organiza imagem e texto lado a lado */
+    align-items: center; /* Alinha verticalmente */
+    gap: 10px; /* Espaçamento entre imagem e texto */
+    width: 100%; /* Ajusta a largura para caber na tela */
+  }
+
+  .reward-option-icon img {
+    width: 60px; /* Reduz o tamanho da imagem */
+    height: auto; /* Mantém a proporção */
+  }
+
+  .reward-option-text h4 {
+    font-size: 1rem; /* Ajusta o tamanho do subtítulo */
+  }
+
+  .reward-option-text p {
+    font-size: 0.9rem; /* Ajusta o tamanho do texto */
+  }
+
+  /* Ajustes para .questions-section */
+  .questions-section {
+    padding: 20px;
+    text-align: left; /* Alinha o texto ao início (esquerda) */
+  }
+
+  .questions-section h2 {
+    font-size: 1.5rem; /* Ajusta o tamanho do título */
+    margin-bottom: 10px;
+  }
+
+  .questions-section p {
+    font-size: 0.9rem; /* Ajusta o tamanho do texto */
+    max-width: 100%; /* Garante que ocupe toda a largura disponível */
+    line-height: 1.5; /* Melhora o espaçamento entre linhas */
+  }
+
+  .questions-section a {
+    font-size: 0.9rem; /* Ajusta o tamanho do link */
+  }
+}
